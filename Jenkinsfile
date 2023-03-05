@@ -8,7 +8,7 @@ pipeline {
             }
                 stage('Build the code') {
                     steps {
-                         sh 'mvn clean package'
+                         sh 'mvn clean package sonar:sonar'
                         }
                 }
                 stage ('Archiving and Test Results') {
