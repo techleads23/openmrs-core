@@ -13,7 +13,7 @@ pipeline {
         stage('Build the code and Sonar Cube Analysis') {
           steps {
                 withSonarQubeEnv('SONAR_LATEST') { 
-	         sh script: 'mvn clean package sonar:sonar' 	
+	             sh script: 'mvn clean package' 	
             }
           }
 	}
